@@ -16,7 +16,9 @@ while True:
     if sexo in 'F':
         if idade < 20:
             meninas += 1
-    resp = str(input('Quer continuar? [S/N]: ')).strip()[0]
+    resp = ' '
+    while resp not in 'SsNn':
+        resp = str(input('Quer continuar? [S/N]: ')).strip()[0]
     if resp not in 'Ss':
         break
 print(f'Total de pessoas com mais de 18 anos: {maior}.')
