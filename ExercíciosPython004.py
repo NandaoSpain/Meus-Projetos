@@ -3,7 +3,7 @@ números = ('zero', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete',
            'quinze', 'dezesseis', 'dezessete', 'dezoito', 'dezenove', 'vinte')
 while True:
     usuário = int(input('Digite um número entre 0 e 20: '))
-    print(f'Você digitou o número {numeros[usuário]}')
+    print(f'Você digitou o número {números[usuário]}')
     resp = str(input('Quer continuar? [S/N] ')).strip()[0].upper()
     if resp not in 'Ss':
         break
