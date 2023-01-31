@@ -19,7 +19,7 @@ while True:
         resp = str(input('Continuamos? [S/N]: ')).strip().upper()
         if resp in 'SN':
             break
-        print('ERRO! Digite apenas S ou N')
+        print('ERROR! Digite apenas S ou N')
     if resp == 'N':
         break
 print('* *' * 17)
