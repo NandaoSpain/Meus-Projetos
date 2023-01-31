@@ -22,18 +22,18 @@ while True:
         print('ERRO! Digite apenas S ou N')
     if resp == 'N':
         break
-print('* *' * 13)
-print(f'{"cod":<6}', f'{"nome":<15}', f'{"gols":<8}', f'{"total":>6}')
-print('-' * 40)
+print('* *' * 17)
+print(f'{"cod":<6}', f'{"nome":<20}', f'{"gols":<12}', f'{"total":>8}')
+print('-' * 50)
 for k, v in enumerate(princ):
-    print(f'{k:<7}', end='')
-    print(f'{v["Nome"]:<17}', end='')
-    print(f'{"v":<8}', end='')
-    print(f'{v["Total"]:^6}')
-print('-' * 40)
+    print(f'{k:<6}', end='')
+    for d in v.values():
+        print(f'{str(d):<20}', end='')
+    print()
+print('-' * 50)
 while True:
     busca = int(input('\nMostrar dados de qual jogador? [999 para parar]: '))
-    print('-' * 40)
+    print('-' * 50)
     if busca == 999:
         break
     print(f'Levantamento do jogador {princ[busca]["Nome"]}:')
