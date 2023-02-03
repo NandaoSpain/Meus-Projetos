@@ -5,14 +5,11 @@ def voto():
     idade = date.today().year - nasc
     resultado = ''
     if idade < 16:
-        resultado = 'Não Vota'
+        resultado = print(f'Com {idade} anos: Não Vota')
     elif 16 <= idade < 18 or idade > 65:
-        resultado = 'Voto Opcional'
+        resultado = print(f'Com {idade} anos: Voto Opcional')
     else:
-        resultado = 'Voto Obrigatório'
-        
-
-    print(f'Com {idade} anos: {resultado}')
+        resultado = print(f'Com {idade} anos: Voto Obrigatório')
 
 
 voto()
