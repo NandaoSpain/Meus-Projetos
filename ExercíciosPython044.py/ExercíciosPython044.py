@@ -1,7 +1,6 @@
-from ExerciciosPython.Ex044 import moeda
+from ExerciciosPython.Ex045 import moeda
 
 num = (int(input('Digite o Preço: R$')))
-print(f'O dobro de R${num} é R${moeda.dobro(num)}')
-print(f'A metade de R${num} é R${moeda.metade(num)}')
-print(f'Aumentando 10%, temos R${moeda.aumentar(num, 10)}')
-print(f'Diminuindo 17%, temos R${moeda.diminuir(num, 17)}')
+print(f'O dobro de {moeda.din(num)} é {moeda.din(moeda.dobro(num))}')
+print(f'A metade de {moeda.din(num)} é {moeda.din(moeda.metade(num))}')
+print(f'Aumentando 10%, temos {moeda.din(moeda.aumentar(num, 10))}')
