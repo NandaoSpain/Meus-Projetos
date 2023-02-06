@@ -1,4 +1,6 @@
-from ExerciciosPython.Ex046 import moeda
+from ExercíciosPython044 import moeda
+from ExercíciosPython044 import dado
 
-num = (int(input('Digite o Preço: R$')))
+num = dado.leiaDinheiro('Digite o Preço: R$')
 moeda.resumo(num, 20, 12)
+
