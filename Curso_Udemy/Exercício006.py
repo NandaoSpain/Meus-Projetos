@@ -31,7 +31,10 @@ while True:
             compras.append(input('Digite um item para inserir: '))
             print('Item inserido com sucesso!')
         elif opção in 's':
-            
+            print('Finalizando Programa...')
+            sleep(1)
+            print('Volte sempre que quiser!')
+            sleep(1)
             break
     except IndexError:
         print('Por favor digite uma opção válida!')
