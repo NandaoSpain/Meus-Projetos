@@ -21,8 +21,8 @@ while True:
                     print(f'Item {indice_apagar} apagado com sucesso!')
                     sleep(2)
                     os.system('cls')
-                except (TypeError, ValueError):
-                    print('Por favor digite somente números!')
+                except (TypeError, ValueError, IndexError):
+                    print('Por favor digite somente números! E que sejam índices válidos!')
                     continue
             else:
                 print('Lista vazia, nada para apagar!')
