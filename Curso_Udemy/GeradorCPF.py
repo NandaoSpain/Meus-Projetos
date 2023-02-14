@@ -1,6 +1,3 @@
-import sys
-import os
-from time import sleep
 from random import randint
 print('Gerador de CPF'.center(30))
 nove_digitos = []
