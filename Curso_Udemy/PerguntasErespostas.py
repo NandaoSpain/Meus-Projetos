@@ -24,5 +24,8 @@ for pergunta in perguntas:
     print()
     print('Opção: ')
     print()
+    ind = 1
     for opcao in pergunta['Opções']:
+        print(f'{ind}) ', end='')
         print(opcao)
+        ind += 1
