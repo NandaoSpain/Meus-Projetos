@@ -33,29 +33,36 @@ for pergunta in perguntas:
 
        
     resp = input('Qual a Resposta? ')
-    if resp == pergunta['Resposta']:
-        print('Conferindo no nosso sistema...')
-        sleep(2)
-        print('Acertou!')
-        print('Sorteando próxima pergunta...')
-        sleep(2)
-        acertos += 1
-        os.system('cls')
+    if resp in pergunta['Resposta']:
+        if resp == pergunta['Resposta']:
+            print('Conferindo no nosso sistema...')
+            sleep(2)
+            print('Acertou!')
+            print('Sorteando próxima pergunta...')
+            sleep(2)
+            acertos += 1
+            os.system('cls')
+        else:
+            print('Conferindo no nosso sistema...')
+            sleep(2)
+            print('Errou!')
+            print('Sorteando próxima pergunta...')
+            sleep(2)
+            erros += 1
+            os.system('cls')
     else:
-        print('Conferindo no nosso sistema...')
+        print('Opção inválida!, considerando como errada...')
         sleep(2)
-        print('Errou!')
-        print('Sorteando próxima pergunta...')
-        sleep(2)
-        erros += 1
         os.system('cls')
+        erros += 1
+        continue
 
-if acertos == 3:
-    print('Você é Fera!! Acertou todas...')
-    print()
-elif acertos == 0:
-    print('Vixi... Tem q treinar mais!!')
-    print()
-else:
-    print(f'Você acertou {acertos} vezes e errou {erros} vezes.')
-    print()
+    if acertos == 3:
+        print('Você é Fera!! Acertou todas...')
+        print()
+    elif acertos == 0:
+        print('Vixi... Tem q treinar mais!!')
+        print()
+    else:
+        print(f'Você acertou {acertos} vezes e errou {erros} vezes.')
+        print()
