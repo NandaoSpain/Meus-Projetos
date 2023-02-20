@@ -14,6 +14,22 @@ listas = [
 ]
 
 
+def encontrar(lista_inteiros):
+    checados = set()
+    global duplicado
+    duplicado = -1
+    for numero in lista_inteiros:
+        if numero not in checados:
+            checados.add(numero)
+        else:
+            duplicado = (numero)
+            break
+    return duplicado
+
+
 for lista in listas:
-    lista = set(lista)
-    print(lista)
+    encontrar(lista)
+    if duplicado == -1:
+        print(f'Na lista {lista}, não houve ocorrência de duplicados!')
+    else:
+        print(f'Na lista {lista} a primeira ocorrência duplicada foi {duplicado}')
