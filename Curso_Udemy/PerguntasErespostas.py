@@ -29,7 +29,7 @@ for pergunta in perguntas:
     print()
 
     for i, opcao in enumerate(pergunta['Opções']):
-        print(f'{i}) ', opcao)
+        print(f'{i+1}) ', opcao)
 
        
     resp = input('Qual a Resposta? ')
