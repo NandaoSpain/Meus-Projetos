@@ -16,6 +16,7 @@ print(*novos_produtos, sep='\n')
 
 # Ordene os produtos por nome decrescente (do maior para menor)
 # Gere produtos_ordenados_por_nome por deep copy (cópia profunda)
+
 print()
 print('produtos ordenados por nome')
 produtos_ordenados_por_nome = sorted(novos_produtos, key=lambda p: p['nome'], reverse=True)
