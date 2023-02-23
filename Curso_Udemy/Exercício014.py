@@ -23,6 +23,7 @@ print(*produtos_ordenados_por_nome, sep='\n')
 
 # Ordene os produtos por preco crescente (do menor para maior)
 # Gere produtos_ordenados_por_preco por deep copy (cópia profunda)
+
 print()
 print('produtos ordenados por preço')
 produtos_ordenados_por_preco = sorted(produtos_ordenados_por_nome, key=lambda p:p['preco'])
