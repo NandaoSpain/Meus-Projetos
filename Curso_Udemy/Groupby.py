@@ -24,4 +24,3 @@ for chave, grupo in grupos:
     print(chave)
     for aluno in grupo:
         print(aluno)
-
