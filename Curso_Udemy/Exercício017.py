@@ -1,5 +1,5 @@
 from functools import partial
-
+from functools import reduce
 
 def print_iter(iterator):
     print(*list(iterator), sep='\n')
@@ -20,8 +20,16 @@ produtos = [
     {'nome': 'Produto 4', 'preco': 69.90},
 ]
 
+
+def somatoria(acumulador, produto):
+    return acumulador + produto['preco']
+
+
+total = reduce(somatoria, produtos, 0)
+
 novos_produtos =[
     {**p, 'preco': aumentar_dez_porcento(p['preco'])} for p in produtos
 ]
 print_iter(produtos)
 print_iter(novos_produtos)
+print(f'O total dos produtos é {total:.2f}')
