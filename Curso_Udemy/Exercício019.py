@@ -1,5 +1,6 @@
 import os
 
+
 tarefas = []
 tarefas_refazer = []
 
