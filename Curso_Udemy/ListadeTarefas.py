@@ -43,18 +43,25 @@ def refazer(tarefas, tarefas_refazer):
     listar(tarefas)
 
 
+def adicionar(tarefa, tarefas):
+    print()
+    if tarefa is None:
+        print('Você não adicionou nenhuma tarefa')
+    
+    tarefas.append(tarefa)
+    listar(tarefas)
+
 while True:
     print('Comandos: listar, desfazer, refazer. ')
     tarefa = input('Digite uma tarefa ou comando: ')
-    
-    if tarefa == 'listar':
-        listar(tarefas)
-    elif tarefa == 'desfazer':
-        desfazer(tarefas, tarefas_refazer)
-    elif tarefa == 'refazer':
-        refazer(tarefas, tarefas_refazer)
-    else:
-        tarefas.append(tarefa)
-        os.system('cls')
-        listar(tarefas)
+
+    comandos = {
+        'listar': lambda: listar(tarefas),
+        'refazer': lambda: refazer(tarefas, tarefas_refazer),
+        'desfazer': lambda: desfazer(tarefas, tarefas_refazer),
+        'adicionar': lambda: adicionar(tarefa, tarefas)
+    }
+
+    comando = comandos.get(tarefa) if comandos.get(tarefa) is not None else comandos['adicionar']
+    comando()
     
