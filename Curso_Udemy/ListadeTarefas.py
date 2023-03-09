@@ -1,12 +1,5 @@
 import os
 import json
-<<<<<<< Updated upstream
-
-tarefas = []
-tarefas_refazer = []
-
-=======
->>>>>>> Stashed changes
 
 def listar(tarefas):
     print()
@@ -56,16 +49,6 @@ def adicionar(tarefa, tarefas):
     listar(tarefas)
 
 
-<<<<<<< Updated upstream
-caminho_arquivo = 'C:\\Users\\Nandão\\Documents\\Meus Projetos\\Meus-Projetos\\Curso_Udemy\\listadetarefas.txt'
-
-with open(caminho_arquivo, 'w+') as lista_de_tarefas:
-    ...
-
-lista_de_tarefas = open(caminho_arquivo, 'w+')
-
-
-=======
 def ler(tarefas, caminho_arquivo):
     dados = []
     try:
@@ -86,7 +69,6 @@ caminho_arquivo = 'listadetarefas.json'
 tarefas = ler([], caminho_arquivo)
 tarefas_refazer = []
 
->>>>>>> Stashed changes
 while True:
     print('Comandos: listar, desfazer, refazer. ')
     tarefa = input('Digite uma tarefa ou comando: ')
@@ -101,10 +83,5 @@ while True:
 
     comando = comandos.get(tarefa) if comandos.get(tarefa) is not None else comandos['adicionar']
     comando()
-<<<<<<< Updated upstream
-
-lista_de_tarefas.close()
-=======
     salvar(tarefas, caminho_arquivo)
     
->>>>>>> Stashed changes
