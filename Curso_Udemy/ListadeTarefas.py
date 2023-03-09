@@ -45,7 +45,7 @@ def adicionar(tarefa, tarefas):
         print('Você não adicionou nenhuma tarefa')
     
     
-    lista_de_tarefas.append(tarefa)
+    tarefas.append(tarefa)
     listar(tarefas)
 
 
@@ -72,8 +72,7 @@ tarefas_refazer = []
 while True:
     print('Comandos: listar, desfazer, refazer. ')
     tarefa = input('Digite uma tarefa ou comando: ')
-    if tarefa == 'sair':
-        break
+    
     comandos = {
         'listar': lambda: listar(tarefas),
         'refazer': lambda: refazer(tarefas, tarefas_refazer),
